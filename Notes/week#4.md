@@ -1,4 +1,4 @@
-## nmap 
+## nma   
 **What is nmap?**
 - network mapper is an open-source tool that scans networks, IP addresses and ports by sending packets and observe how the target reacts
 **What is nmap used for**
