@@ -8,10 +8,21 @@
 - the severity varies on the template the payload was injected to, in this example it isn't really that harmful, but incases, some template could have a vulnerability that leads to RCE, or if not RCE, could simply have access to read and view sensetive data
 
 ## constructing a SSLI takes this proceduers:
-1. Detect: the initiall step to find any SSTI vuln is to try fuzzing and inject this common syntaxes `${{<%[%'"}}%\` and view the informational respomse the site gives back
+1. Detect: - the initiall step to find any SSTI vuln is to try fuzzing and inject this common syntaxes `${{<%[%'"}}%\` and view the informational respomse the site gives back
    A. Plaintext context
    B. Code context
-3. Identify
+3. Identify: - identify what template engine is being used, for this using a wrong syntax would trigger an error message and we could know what enginge exactly that is from, fro example, `<%=foobar%>` will out put ```(erb):1:in `<main>': undefined local variable or method `foobar' for main:Object (NameError)
+from /usr/lib/ruby/2.5.0/erb.rb:876:in `eval'
+from /usr/lib/ruby/2.5.0/erb.rb:876:in `result'
+from -e:4:in `<main>'```
+- other way is to narrow it down
+
+![Uploading image.png…]()
+
+
+
+
+
 4. Exploit
 
 
