@@ -16,14 +16,18 @@ from /usr/lib/ruby/2.5.0/erb.rb:876:in `eval'
 from /usr/lib/ruby/2.5.0/erb.rb:876:in `result'
 from -e:4:in `<main>'```
 - other way is to narrow it down
-
-![Uploading image.png…](https://portswigger.net/web-security/images/template-decision-tree.png)
-
-
-
-
-
-4. Exploit
+   ![Uploading image.png…](https://portswigger.net/web-security/images/template-decision-tree.png)
+4. Exploit:
+  A. Read: after identifying the template engine, it is important to know the syntax of it
+    - Template syntax: know the basics of that engine's syntax, including the key functions and variables and how to embed something. ex; basic python-based mako engine to gain RCE: ```<%
+                import os
+                x=os.popen('id').read()
+                %>
+                ${x}```
+    - Security documentation:
+    - Documented exploits:
+  B. Explore
+  C. Create a custome attck
 
 
  ## XSS vs SSTI
