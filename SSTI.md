@@ -17,7 +17,7 @@ from /usr/lib/ruby/2.5.0/erb.rb:876:in `result'
 from -e:4:in `<main>'```
 - other way is to narrow it down
 
-![Uploading image.png…]()
+![Uploading image.png…](https://portswigger.net/web-security/images/template-decision-tree.png)
 
 
 
