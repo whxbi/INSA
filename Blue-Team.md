@@ -52,3 +52,18 @@
 | /var/log/mysql/ | General (MySQL) | Auditing database queries to detect data exfiltration or SQL injection attempts. | Database queries, slow queries, and error logs for the MySQL server. |
 | /var/log/faillog | General | Auditing failed login attempts to identify authentication attacks like brute force. | Failed login attempts, including time and source. |
 | /var/log/cron | General | Auditing scheduled tasks to detect malicious persistence added via cron jobs. | Logs of cron job executions. |
+
+## steps
+1. triage:
+   - Context Gathering: Reviewing the alert's source from the SIEM dashboard, IDS/IPS, or EDR tool.
+   - Initial Alert Assessment: Determining if the activity appears malicious or benign.
+   - Criticality Assignment: Assigning a priority level (e.g., High, Medium, Low) to the incident, which dictates the order and urgency of the investigation.
+   - Initial Documentation: Immediately capturing key details and timestamps, marking the beginning of the official incident log.
+- once triage is confirmed, certain procedure is made to insure nothing is missed (NIST (SP 800-61) and SANS (PICERL)).
+2. Detection:
+   - Who? Identify the compromised user account(s) and the attacker's IP addresses. Look for unusual user agents, logins from new locations, or patterns of failed logons before a success.
+   - What? Pinpoint the specific nature of the incident: Is it malware, a phishing attempt, unauthorized access, or data exfiltration? Determine the tools and techniques used, like suspicious processes, command-line arguments, or registry modifications.
+   - When? Establish the initial compromise time (the "patient zero" event) and track every subsequent action to reconstruct the attack timeline.
+   - Where? Identify all affected systems (hostnames, IPs), compromised user accounts, and impacted data or servers.
+3. Containment:
+   - 
