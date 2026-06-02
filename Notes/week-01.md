@@ -1,4 +1,4 @@
-# Linux and cybersecurity introduction
+# Linux & Cybersecurity introduction
 > Saturday, March 7, 2026
 
 - everything in Linux is basicaly a file and a directory
@@ -36,6 +36,20 @@
 | `/home` | 🔴 Red | Primary target for user data exfiltration |
 | `/root` | 🔴 Red | Achieving access here = full system compromise |
 
-### Useful sources
+# Linux Operations & File Permissions
+> Sunday, March 8, 2026
+
+## Linux File Permissions
+ | Permissions   | Octal(numeric)   | Letters(Symbolic)   |
+ | :-----------: | :-----: | :-------: |
+ | no permission |    0    |   ---     |
+ | Execute       |    1    |   --x     |
+ | Write         |    2    |   -w-     | 
+ | Write+Execute |    3    |   -wx     |
+ | Read          |    4    |   r--     |
+ | Read+Execute  |    5    |   r-x     | 
+ | Read+Write    |    6    |   rw-     | 
+ | Read+Write+Execute|    7    |   rwx     |
+
+ ### Useful sources
 > https://overthewire.org/wargames/bandit/
-> 
